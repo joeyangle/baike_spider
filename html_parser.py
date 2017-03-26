@@ -38,8 +38,10 @@ class HtmlParser(object):#构造方法
         
 ###以下是修改版
 # -*- coding:utf-8 -*-
-beautifulsoup的问题尚未解决，错误表示为引用的函数缺失，可能为版本问题，网上搜索结果为python2.*才有这种问题，但是使用的是python3.5，很气
-
+#beautifulsoup的问题尚未解决，错误表示为引用的函数缺失，可能为版本问题，网上搜索结果为python2.*才有这种问题，但是使用的是python3.5，很气
+#报错为No module named 'html.entities'
+#问题成功解决-----At last, I found it's just because I have a file also named "html.py", in the same directory of the script file.
+#Therefore, when BeautifulSoup "from html.entities import codepoint2name", it throw exception......------原来是新建的文件重名0-0
 #from bs4 import BeautifulSoup
 #此处由于beautisoup的原因无法解析网页，故重新定义函数进行网页解析
 import re
